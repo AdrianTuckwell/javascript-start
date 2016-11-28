@@ -48,20 +48,12 @@
 
 // console.log ("biggest is " + greater(3,2));
 
-
-
-
-
-
-
-
 // var hello = function() {
 //   console.log("Hello!");
 
 // }
 
 // hello();
-
 
 var add = function(a,b){
   return a + b;
@@ -70,7 +62,6 @@ var add = function(a,b){
 var wow = function(functionToInvoke){
   console.log(functionToInvoke(2,1));
 }
-
 
 wow(add);
 

@@ -24,7 +24,11 @@ console.log(multiply(3,3));
 
 var people = ["John", "Jim", "Jake"];
 
-console.log(people[0]);
+function firstElement(people){
+  return people[0]
+}
+
+console.log(firstElement(["John", "Jim", "Jake"]));
 
 // ----------------------------------------------------
 

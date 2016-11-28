@@ -163,14 +163,16 @@ console.log(max);
 //7.3 Find the name of the account with the smallest balance
 
 var min = 99999999;
+var poorest = "";
 for (var key in accounts)
 {
   if (min > accounts[key].amount)
   {
     min = accounts[key].amount;
+    poorest = accounts[key].name;
   }
 }
-console.log(min);
+console.log(poorest);
 
 //7.4 Calculate the average bank account value
 

@@ -227,15 +227,18 @@ console.log(total);
 //7.8 Find the largest personal account owner
 
 var max = 0;
+var richestPerson = "";
 for (var key in accounts)
 {
   if ((max < accounts[key].amount) && 
       (accounts[key].type === 'personal'))
   {
     max = accounts[key].amount;
+    richestPerson = accounts[key].name;
   }
 }
-console.log(max);
+console.log(richestPerson + " " + max);
+
 
 //Section 8 ---------------------------------------------
 //Assign a variable myPerson to a hash, giving them a name, height, favourite food and an eat method

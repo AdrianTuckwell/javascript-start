@@ -1,10 +1,10 @@
 
 // myPerson object
-// var myPerson = {
-//   name: "Guybrush",
-//   age: 32,
-//   weapon: "cutlass",
-//   address: { street: "Pirate Way", postcode: "EH1 4AL"}
+var myPerson = {
+  name: "Guybrush",
+  age: 32,
+  weapon: "cutlass",
+  address: { street: "Pirate Way", postcode: "EH1 4AL"}
 
 
 // };

@@ -5,7 +5,7 @@
 1;          // number
 "cat";      // String
 true;       // bollean
-[];         // Array
+[];         // Object
 {};         // Object
 1.1;        // number
 undefined;  // undefiend
@@ -21,9 +21,9 @@ true;       //  true
 NaN;        //  false
 [];         //  true
 {};         //  true
-undefined;  //  undefiend
-"";         //  undefiend
-0;          //  undefined
+undefined;  //  false
+"";         //  false
+0;          //  false
 
 
 //Section 3 -------------------------------------------
@@ -56,7 +56,8 @@ var myCar {
 
 var myBool = false;
 
-if (myBool === true){
+if (myBool === true)
+  {
     console.log("Hello")
   } else {
     console.log("bye")  
@@ -87,7 +88,7 @@ animals.unshift("Horse");
 
 //5.6. Assign the index of hedgehog to a variable
 
-var hedgehog = animals[1];
+var hedgehog = animals.indexOf("hedgehog");
 
 //Section 6 ------------------------------------------------
 
@@ -106,14 +107,13 @@ while (x < myArray.length) {
 
 //6.3 Loop again using a "for" with a counter
 
-for (var key in myArray){
-  console.log(key + "=" + myArray[key]);
-}
-
-//6.4 Loop again using a "for if"
-
 for (var i = 0; i < myArray.length; i++){
   console.log(myArray[i]);
+}
+
+//6.4 Loop again using a "for of"
+for (var key of myArray){
+  console.log(key + "=" + myArray[key]);
 }
 
 //Section 7 -----------------------------------------------
@@ -141,10 +141,19 @@ var accounts = [
 ];
 //7.1 Calculate the total cash in accounts
 
+// using a for in
 var total = 0
 for (var key in accounts)
 {
   total += accounts[key].amount;
+}
+console.log(total);
+
+// using a for of
+var total = 0
+for (var key of accounts)
+{
+  total += key.amount;
 }
 console.log(total);
 
@@ -188,7 +197,7 @@ console.log(average);
 
 //7.5 Find the value of marcs bank account
 
-marcsAccount = 0
+var marcsAccount = 0
 for (var key in accounts)
 {
   if (accounts[key].name === "marc")
@@ -238,7 +247,6 @@ for (var key in accounts)
   }
 }
 console.log(richestPerson + " " + max);
-
 
 //Section 8 ---------------------------------------------
 //Assign a variable myPerson to a hash, giving them a name, height, favourite food and an eat method
